@@ -8,5 +8,7 @@ namespace Quiz
     {
         public string inhoud { get; set; }
         public string antwoord { get; set; }
+        public string categorie { get; set; }
+        public int moeilijkheidsgraad { get; set; }
     }
 }
