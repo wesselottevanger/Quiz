@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Quiz
 {
@@ -8,21 +10,22 @@ namespace Quiz
 
         static void Main(string[] args)
         {
-            Vraag vraag1 = new Vraag()
+            IList<Vraag> stringList = new List<Vraag>() {
+                new Vraag()
             {
                 inhoud = "wat is 11 x 23",
                 antwoord = "253",
                 categorie = "wiskunde",
                 moeilijkheidsgraad = 1
-            };
-            Vraag vraag2 = new Vraag()
+            },
+                new Vraag()
             {
                 inhoud = "welke kleur is een schaap?",
                 antwoord = "Wit",
                 categorie = "algemene kennis",
                 moeilijkheidsgraad = 1
-            };
-            Vraag vraag3 = new Vraag()
+            },
+                new Vraag()
             {
                 inhoud = "Zijn alle insecten groen?" +
             "A: Ja" +
@@ -30,8 +33,8 @@ namespace Quiz
                 antwoord = "B",
                 categorie = "algemene kennis",
                 moeilijkheidsgraad = 1
-            };
-            Vraag vraag4 = new Vraag()
+            },
+                new Vraag()
             {
                 inhoud = "Kunnen alle vissen zwemmen?" +
             "A: Ja" +
@@ -39,21 +42,22 @@ namespace Quiz
                 antwoord = "A",
                 categorie = "algemene kennis",
                 moeilijkheidsgraad=2
-            };
-            Vraag vraag5 = new Vraag()
-            {
-                inhoud = "Hoeveel minuten zitten er in een dag?",
-                antwoord = "1440",
-                categorie = "wiskunde",
-                moeilijkheidsgraad = 2
-            };
-            Vraag vraag6 = new Vraag()
+            },
+                new Vraag()
             {
                 inhoud = "Welke kleur is een kameleon",
                 antwoord = "elke",
                 categorie = "striktvragen",
                 moeilijkheidsgraad = 3
-            };
+            },
+                new Vraag()
+            {
+                inhoud = "Hoeveel minuten zitten er in een dag?",
+                antwoord = "1440",
+                categorie = "wiskunde",
+                moeilijkheidsgraad = 2
+            }
+        };
         }
     }
 }
